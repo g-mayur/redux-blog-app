@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: white;
+    color: #000;
+}
+
+body {
+    font-size: 1.5rem;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+input,
+textarea,
+button,
+select {
+    font: inherit;
+    margin-bottom: 1em;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    font-size: 1.2rem;
+    margin: 0.5em 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+textarea {
+    height: 200px;
+}
+
+.excerpt {
+    font-style: italic;
+}
+
+.reactionButton {
+    background: transparent;
+    border: none;
+    color: #000;
+    font-size: 1.2rem;
+    border: 1px solid #CE6028;
+    border-radius: 4px;
+}
+
+.deleteButton {
+    background-color: palevioletred;
+    color: white;
+}
+
+.Form-title {
+    padding: 0 20px;
+}
