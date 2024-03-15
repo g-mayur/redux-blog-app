@@ -5,7 +5,7 @@ import {
     selectPostsError,
 } from './postsSlice';
 import PostsExerpt from './PostsExerpt';
-import "../../styles/bloglist.css";
+import "../../styles/blog.css";
 
 const PostsList = () => {
     const posts = useSelector(selectAllPosts);

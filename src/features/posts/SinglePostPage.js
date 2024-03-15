@@ -32,7 +32,7 @@ const SinglePostPage = () => {
         <div className="container-fluid">
             <div className="row g-3">
                 <div className="col col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <div className='article details d-flex flex-column'>
+                    <div className='article details d-flex flex-column p-0 mt-3'>
                         <h2 className='mb-0 blog-title'>{post.title}</h2>
                         <div className='author-time d-flex flex-column flex-grow-1'>
                             <PostAuthor userId={post.userId} />
