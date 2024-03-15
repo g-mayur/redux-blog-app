@@ -3,8 +3,8 @@ import { reactionAdded } from './postsSlice';
 import { FaThumbsUp, FaThumbsDown, FaHeart, FaMugHot, FaGift } from "react-icons/fa6";
 
 const reactionEmoji = {
-  thumbsUp: <FaThumbsUp/>,
-  wow: <FaThumbsDown  />,
+  thumbsUp: <FaThumbsUp />,
+  wow: <FaThumbsDown />,
   heart: <FaHeart />,
   rocket: <FaMugHot />,
   coffee: <FaGift />,

@@ -1,6 +1,5 @@
 import PostAuthor from './PostAuthor';
 import TimeAgo from './TimeAgo';
-// import ReactionButtons from './ReactionButtons';
 import { Link } from 'react-router-dom';
 
 const PostExerpt = ({ post }) => {
@@ -16,7 +15,6 @@ const PostExerpt = ({ post }) => {
                     </div>
                     <Link to={`/post/${post.id}`} className='btn btn-primary ml-auto'>View Post </Link>
                 </div>
-                {/* <ReactionButtons post={post} /> */}
             </div>
         </div>
     );

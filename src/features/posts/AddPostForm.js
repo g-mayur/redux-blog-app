@@ -48,28 +48,28 @@ export const AddPostForm = () => {
         <div className="container-fluid">
             <div className="row g-3">
                 <div className="col col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <section className='addPost-wrapper'>
-                        <h2 className="Form-title">Add a New Post</h2>
+                    <section className='form-wrapper'>
+                        <h2 className="Form-title mb-3">Add a New Post</h2>
                         <form>
-                            <div class="form-group">
-                                <label htmlFor="postTitle">Post Title:</label>
-                                <input type="text" class="form-control" id="postTitle" name="postTitle" value={title} onChange={onTitleChanged} />
+                            <div className="form-group">
+                                <label htmlFor="postTitle">Post Title</label>
+                                <input type="text" className="form-control" id="postTitle" name="postTitle" value={title} onChange={onTitleChanged} placeholder='Enter Post Title' />
                             </div>
 
-                            <div class="form-group">
-                                <label htmlFor="postAuthor">Author:</label>
-                                <select class="form-control" id="postAuthor" value={userId} onChange={onAuthorChanged}>
-                                    <option value=""></option>
+                            <div className="form-group">
+                                <label htmlFor="postAuthor">Author</label>
+                                <select className="form-select" id="postAuthor" value={userId} onChange={onAuthorChanged}>
+                                    <option selected value="">Select Author</option>
                                     {usersOptions}
                                 </select>
                             </div>
 
-                            <div class="form-group">
-                                <label htmlFor="postContent">Content:</label>
-                                <textarea class="form-control" id="postContent" name="postContent" value={content} onChange={onContentChanged} rows="3" />
+                            <div className="form-group">
+                                <label htmlFor="postContent">Description</label>
+                                <textarea className="form-control" id="postContent" name="postContent" value={content} onChange={onContentChanged} rows="5" placeholder='Enter Description' />
                             </div>
 
-                            <button type="button" onClick={onSavePostClicked} disabled={!canSave}>Save Post</button>
+                            <button type="button" onClick={onSavePostClicked} disabled={!canSave} className='btn btn-primary mt-3 blog-filled-button'>Save Post</button>
                         </form>
                     </section>
                 </div>

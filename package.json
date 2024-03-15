@@ -1,7 +1,8 @@
 {
-  "name": "02_lesson",
+  "name": "react-redux-blog-app",
   "version": "0.1.0",
   "private": true,
+  "author": "Mayur Gandhi - mayur.g@crestinfosystems.net",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.0",
     "axios": "^1.4.0",

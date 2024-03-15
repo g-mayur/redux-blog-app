@@ -21,9 +21,15 @@ const EditPostForm = () => {
 
     if (!post) {
         return (
-            <section>
-                <h2>Post not found!</h2>
-            </section>
+            <div className="container-fluid">
+                <div className="row g-3">
+                    <div className="col col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <section className='text-center not-found d-flex align-items-center justify-content-center'>
+                            <h2>No Post Found</h2>
+                        </section>
+                    </div>
+                </div>
+            </div>
         );
     }
 
@@ -84,49 +90,37 @@ const EditPostForm = () => {
     };
 
     return (
-        <section>
-            <h2>Edit Post</h2>
-            <form>
-                <label htmlFor="postTitle">Post Title:</label>
-                <input
-                    type="text"
-                    id="postTitle"
-                    name="postTitle"
-                    value={title}
-                    onChange={onTitleChanged}
-                />
-                <label htmlFor="postAuthor">Author:</label>
-                <select
-                    id="postAuthor"
-                    value={userId}
-                    onChange={onAuthorChanged}
-                >
-                    <option value=""></option>
-                    {usersOptions}
-                </select>
-                <label htmlFor="postContent">Content:</label>
-                <textarea
-                    id="postContent"
-                    name="postContent"
-                    value={content}
-                    onChange={onContentChanged}
-                />
-                <button
-                    type="button"
-                    onClick={onSavePostClicked}
-                    disabled={!canSave}
-                >
-                    Save Post
-                </button>
-                <button
-                    className="deleteButton"
-                    type="button"
-                    onClick={onDeletePostClicked}
-                >
-                    Delete Post
-                </button>
-            </form>
-        </section>
+        <div className="container-fluid">
+            <div className="row g-3">
+                <div className="col col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <section className='form-wrapper'>
+                        <h2 className="Form-title mb-3">Edit Post</h2>
+                        <form>
+                            <div className="form-group">
+                                <label htmlFor="postTitle">Post Title:</label>
+                                <input type="text" className="form-control" id="postTitle" name="postTitle" value={title} onChange={onTitleChanged} placeholder='Enter Post Title' />
+                            </div>
+
+                            <div className="form-group">
+                                <label htmlFor="postAuthor">Author:</label>
+                                <select className="form-select" id="postAuthor" value={userId} onChange={onAuthorChanged}>
+                                    <option selected value="">Select Author</option>
+                                    {usersOptions}
+                                </select>
+                            </div>
+
+                            <div className="form-group">
+                                <label htmlFor="postContent">Content:</label>
+                                <textarea className="form-control" id="postContent" name="postContent" value={content} onChange={onContentChanged} rows="5" placeholder='Enter Description' />
+                            </div>
+
+                            <button type="button" onClick={onSavePostClicked} disabled={!canSave} className='btn btn-primary mt-3 blog-filled-button'>Save Post</button>
+                            <button type="button" className="btn btn-primary mt-3 blog-filled-button delete" onClick={onDeletePostClicked}>Delete Post</button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
     );
 };
 

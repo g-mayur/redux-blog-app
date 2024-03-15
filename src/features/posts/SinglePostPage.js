@@ -26,8 +26,8 @@ const SinglePostPage = () => {
         );
     }
 
-    // Repeat {post.body} 20 times
     const repeatedBody = Array.from({ length: 20 }, () => post.body);
+
     return (
         <div className="container-fluid">
             <div className="row g-3">

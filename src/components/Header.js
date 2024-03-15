@@ -7,17 +7,13 @@ const Header = () => {
         <header className="Header">
             <h3 className='logo'>
                 <Link to="/" className='d-flex align-items-center gap-1'>
-                    <img src={Logo} alt='Blog Logo' style={{maxWidth: '40px'}} /> {" "} Blog
+                    <img src={Logo} alt='Blog Logo' style={{ maxWidth: '40px' }} /> {" "} Blog
                 </Link>
             </h3>
             <nav>
                 <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="post">Add Post</Link>
-                    </li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="post">Add Post</Link></li>
                 </ul>
             </nav>
         </header>

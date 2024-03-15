@@ -5,7 +5,7 @@ const POSTS_URL = 'https://jsonplaceholder.typicode.com/posts';
 
 const initialState = {
     posts: [],
-    status: 'idle', // 'idle' | 'loading' | 'succeeded' | 'failed'
+    status: 'idle',
     error: null,
 };
 
@@ -38,8 +38,7 @@ export const updatePost = createAsyncThunk(
             const response = await axios.put(`${POSTS_URL}/${id}`, initialPost);
             return response.data;
         } catch (err) {
-            //return err.message;
-            return initialPost; // only for testing Redux!
+            return initialPost;
         }
     },
 );
@@ -77,7 +76,6 @@ const postsSlice = createSlice({
         },
         [fetchPosts.fulfilled]: (state, action) => {
             state.status = 'succeeded';
-            // here i will data and reactions to the posts
             let min = 1;
             const loadedPosts = action.payload.map((post) => {
                 return {

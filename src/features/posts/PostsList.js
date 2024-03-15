@@ -14,7 +14,11 @@ const PostsList = () => {
 
     let content;
     if (postsStatus === 'loading') {
-        content = <p>"Loading..."</p>;
+        content = <>
+            <section className='text-center not-found d-flex align-items-center justify-content-center'>
+                <h2>Loading...</h2>
+            </section>
+        </>
     } else if (postsStatus === 'succeeded') {
         const orderedPosts = posts.slice().sort((a, b) => b.date.localeCompare(a.date));
         content = orderedPosts.map((post) => (
