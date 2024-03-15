@@ -97,12 +97,12 @@ const EditPostForm = () => {
                         <h2 className="Form-title mb-3">Edit Post</h2>
                         <form>
                             <div className="form-group">
-                                <label htmlFor="postTitle">Post Title:</label>
+                                <label htmlFor="postTitle">Post Title</label>
                                 <input type="text" className="form-control" id="postTitle" name="postTitle" value={title} onChange={onTitleChanged} placeholder='Enter Post Title' />
                             </div>
 
                             <div className="form-group">
-                                <label htmlFor="postAuthor">Author:</label>
+                                <label htmlFor="postAuthor">Author</label>
                                 <select className="form-select" id="postAuthor" value={userId} onChange={onAuthorChanged}>
                                     <option selected value="">Select Author</option>
                                     {usersOptions}
@@ -110,7 +110,7 @@ const EditPostForm = () => {
                             </div>
 
                             <div className="form-group">
-                                <label htmlFor="postContent">Content:</label>
+                                <label htmlFor="postContent">Description</label>
                                 <textarea className="form-control" id="postContent" name="postContent" value={content} onChange={onContentChanged} rows="5" placeholder='Enter Description' />
                             </div>
 
