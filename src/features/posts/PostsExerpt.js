@@ -1,6 +1,7 @@
 import PostAuthor from './PostAuthor';
 import TimeAgo from './TimeAgo';
 import { Link } from 'react-router-dom';
+import { FaEye } from "react-icons/fa";
 
 const PostExerpt = ({ post }) => {
     return (
@@ -13,7 +14,7 @@ const PostExerpt = ({ post }) => {
                         <PostAuthor userId={post.userId} />
                         <TimeAgo timestamp={post.date} />
                     </div>
-                    <Link to={`/post/${post.id}`} className='btn btn-primary ml-auto text-nowrap'>View Post </Link>
+                    <Link to={`/post/${post.id}`} className='btn btn-primary ml-auto text-nowrap d-flex align-items-center gap-2'><FaEye /> View Post </Link>
                 </div>
             </div>
         </div>

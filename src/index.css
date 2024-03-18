@@ -32,6 +32,11 @@ p {
     margin: 0.5em 0;
 }
 
+.blog-filled-button {
+    min-height: 44px;
+    min-width: 100px;
+}
+
 .react-loading-skeleton {
     z-index: -1;
 }
@@ -46,32 +51,37 @@ p {
 }
 
 .reactionButton {
-    color: #000;
     font-size: 1.2rem;
-    border-radius: 4px;
+    background-color: transparent;
+    border-radius: 50px;
+    min-width: 90px;
 }
-
 .reactionButton.thumbsUp {
-    background: transparent;
-    border: 1px solid #007bff
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    color: #FFFFFF
 }
 
 .reactionButton.wow {
-    background: transparent;
-    border: 1px solid #fd7e14
+    background-color: #fd7e14;
+    border: 1px solid #fd7e14;
+    color: #FFFFFF
 }
 
 .reactionButton.heart {
-    background: transparent;
-    border: 1px solid #dc3545
+    background-color: #dc3545;
+    border: 1px solid #dc3545;
+    color: #FFFFFF
 }
 
 .reactionButton.rocket {
-    background: transparent;
-    border: 1px solid #6c757d
+    background-color: #6c757d;
+    border: 1px solid #6c757d;
+    color: #FFFFFF
 }
 
 .reactionButton.coffee {
-    background: transparent;
-    border: 1px solid #ffc107
+    background-color: #ffc107;
+    border: 1px solid #ffc107;
+    color: #FFFFFF
 }

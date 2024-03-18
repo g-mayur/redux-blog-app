@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectPostById, updatePost, deletePost } from './postsSlice';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 
 import { selectAllUsers } from '../users/usersSlice';
+import { HiArrowSmLeft } from 'react-icons/hi';
+import { FaTrash } from "react-icons/fa";
+import { IoIosSave } from "react-icons/io";
 
 const EditPostForm = () => {
     const { postId } = useParams();
@@ -93,28 +96,45 @@ const EditPostForm = () => {
         <div className="container-fluid">
             <div className="row g-3">
                 <div className="col col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <section className='article form-wrapper h-100 p-3 shadow-sm bg-white rounded'>
-                        <h2 className="Form-title mb-3">Edit Post</h2>
+                    <div className="hstack justify-content-between align-items-center flex-wrap w-100 gap-3 my-3">
+                        <Link to={`/post/${postId}`} className='backNavigation d-flex align-items-center gap-2'>
+                            <HiArrowSmLeft size={32} />Edit Post
+                        </Link>
+                    </div>
+                    <section className='article form-wrapper p-3 shadow-sm bg-white rounded'>
                         <form>
-                            <div className="form-group">
+                            <div className="form-group mb-2">
                                 <label htmlFor="postTitle">Post Title</label>
                                 <input type="text" className="form-control" id="postTitle" name="postTitle" value={title} onChange={onTitleChanged} placeholder='Enter Post Title' autoComplete='off' />
                             </div>
 
-                            <div className="form-group">
+                            <div className="form-group mb-2">
                                 <label htmlFor="postAuthor">Author</label>
                                 <select className="form-select" id="postAuthor" value={userId} onChange={onAuthorChanged}>
                                     {usersOptions}
                                 </select>
                             </div>
 
-                            <div className="form-group">
+                            <div className="form-group mb-2">
                                 <label htmlFor="postContent">Description</label>
                                 <textarea className="form-control" id="postContent" name="postContent" value={content} onChange={onContentChanged} rows="5" placeholder='Enter Description' autoComplete='off' />
                             </div>
 
-                            <button type="button" onClick={onSavePostClicked} disabled={!canSave} className='btn btn-primary mt-3 blog-filled-button'>Save Post</button>
-                            <button type="button" className="btn btn-primary mt-3 blog-filled-button delete" onClick={onDeletePostClicked}>Delete Post</button>
+                            <div className="hstack gap-3 justify-content-end">
+                                <button
+                                    type="button"
+                                    onClick={onSavePostClicked}
+                                    disabled={!canSave}
+                                    className='btn btn-primary mt-3 blog-filled-button d-flex justify-content-center align-items-center gap-2'
+                                > <IoIosSave size={22} /> Save
+                                </button>
+                                <button
+                                    type="button"
+                                    onClick={onDeletePostClicked}
+                                    className="btn btn-primary mt-3 blog-filled-button delete d-flex justify-content-center align-items-center gap-2"
+                                > <FaTrash />Delete
+                                </button>
+                            </div>
                         </form>
                     </section>
                 </div>

@@ -37,12 +37,6 @@ span.timestamp {
     font-weight: 400;
 }
 
-.not-found {
-    min-height: calc(100vh - 120px);
-    opacity: 0.15;
-}
-
-
 .form-wrapper .Form-title {
     font-size: 32px;
     font-weight: 600;
@@ -50,12 +44,12 @@ span.timestamp {
 
 .form-wrapper .form-group label {
     font-size: 18px;
+    font-weight: 600;
     margin-bottom: 5px;
 }
 
 .blog-filled-button {
     font-size: 1rem;
-    margin-right: 0.5rem;
     background-color: #CE6028 !important;
     border: none;
     color: #FFFFFF;
@@ -66,4 +60,20 @@ span.timestamp {
     background-color: transparent !important;
     border: 2px solid #CE6028 !important;
     color: #CE6028 !important;
+}
+
+.backNavigation {
+    font-size: 28px;
+    font-weight: 600;
+    color: #323232;
+}
+
+.backNavigation span {
+    color: #CE6028 !important;
+}
+
+.not-found {
+    min-height: calc(100vh - 120px);
+    opacity: 0.15;
+    font-weight: 600;
 }
