@@ -53,7 +53,7 @@ export const AddPostForm = () => {
                         <form>
                             <div className="form-group">
                                 <label htmlFor="postTitle">Post Title</label>
-                                <input type="text" className="form-control" id="postTitle" name="postTitle" value={title} onChange={onTitleChanged} placeholder='Enter Post Title' />
+                                <input type="text" className="form-control" id="postTitle" name="postTitle" value={title} onChange={onTitleChanged} placeholder='Enter Post Title' autoComplete='off' />
                             </div>
 
                             <div className="form-group">
@@ -65,7 +65,7 @@ export const AddPostForm = () => {
 
                             <div className="form-group">
                                 <label htmlFor="postContent">Description</label>
-                                <textarea className="form-control" id="postContent" name="postContent" value={content} onChange={onContentChanged} rows="5" placeholder='Enter Description' />
+                                <textarea className="form-control" id="postContent" name="postContent" value={content} onChange={onContentChanged} rows="5" placeholder='Enter Description' autoComplete='off' />
                             </div>
 
                             <button type="button" onClick={onSavePostClicked} disabled={!canSave} className='btn btn-primary mt-3 blog-filled-button'>Save Post</button>
