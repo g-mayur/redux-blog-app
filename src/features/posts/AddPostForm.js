@@ -58,7 +58,7 @@ export const AddPostForm = () => {
 
                             <div className="form-group">
                                 <label htmlFor="postAuthor">Author</label>
-                                <select className="form-select" id="postAuthor" value={userId} onChange={onAuthorChanged} defaultValue={usersOptions[0]}>
+                                <select className="form-select" id="postAuthor" value={userId} onChange={onAuthorChanged}>
                                     {usersOptions}
                                 </select>
                             </div>
