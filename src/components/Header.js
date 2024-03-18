@@ -5,17 +5,12 @@ import "../styles/header.css";
 const Header = () => {
     return (
         <header className="Header">
-            <h3 className='logo'>
+            <h3 className='logo mb-0'>
                 <Link to="/" className='d-flex align-items-center gap-1'>
                     <img src={Logo} alt='Blog Logo' style={{ maxWidth: '40px' }} /> {" "} Blog
                 </Link>
             </h3>
-            <nav>
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="post">Add Post</Link></li>
-                </ul>
-            </nav>
+            <Link type="button" to="post" className='btn btn-primary blog-filled-button px-4'>Add New Post</Link>
         </header>
     );
 };

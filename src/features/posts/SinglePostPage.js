@@ -16,23 +16,20 @@ const SinglePostPage = () => {
         return (
             <div className="container-fluid">
                 <div className="row g-3">
-                    <div className="col col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <section className='text-center not-found d-flex align-items-center justify-content-center'>
-                            <h2>No Post Found</h2>
-                        </section>
-                    </div>
+                    <section className='text-center not-found d-flex align-items-center justify-content-center'>
+                        <h2 className='mb-0'>No Post Found</h2>
+                    </section>
                 </div>
             </div>
         );
     }
 
-    const repeatedBody = Array.from({ length: 20 }, () => post.body);
-
+    const repeatedBody = Array.from({ length: 5 }, () => post.body);
     return (
         <div className="container-fluid">
             <div className="row g-3">
                 <div className="col col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <div className='article details d-flex flex-column p-0 mt-3'>
+                    <div className='article details d-flex flex-column mt-3 h-100 p-3 shadow-sm bg-white rounded'>
                         <h2 className='mb-0 blog-title'>{post.title}</h2>
                         <div className='author-time d-flex flex-column flex-grow-1'>
                             <PostAuthor userId={post.userId} />

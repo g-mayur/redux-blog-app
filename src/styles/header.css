@@ -12,6 +12,7 @@ header {
 
 header .logo a {
     color: #CE6028;
+    font-weight: 600;
 }
 
 nav {
@@ -35,4 +36,11 @@ nav a:visited {
     font-size: 20px;
     line-height: 24px;
     font-weight: 500;
+}
+
+@media only screen and (max-width: 420.98px) {
+    nav a {
+        font-size: 18px;
+        line-height: 22px;
+    }
 }

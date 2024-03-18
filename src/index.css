@@ -4,14 +4,10 @@
     box-sizing: border-box;
 }
 
-html {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: white;
-    color: #000;
-}
-
 body {
-    font-size: 1.5rem;
+    background-color: #fcfaf7;
+    font-family: "Mallanna", sans-serif;
+    font-optical-sizing: auto;
 }
 
 body::-webkit-scrollbar {
@@ -31,10 +27,13 @@ select {
 }
 
 p {
-    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.4;
     font-size: 1.2rem;
     margin: 0.5em 0;
+}
+
+.react-loading-skeleton {
+    z-index: -1;
 }
 
 .form-control:focus,
@@ -47,10 +46,32 @@ p {
 }
 
 .reactionButton {
-    background: transparent;
-    border: none;
     color: #000;
     font-size: 1.2rem;
-    border: 1px solid #CE6028;
     border-radius: 4px;
+}
+
+.reactionButton.thumbsUp {
+    background: transparent;
+    border: 1px solid #007bff
+}
+
+.reactionButton.wow {
+    background: transparent;
+    border: 1px solid #fd7e14
+}
+
+.reactionButton.heart {
+    background: transparent;
+    border: 1px solid #dc3545
+}
+
+.reactionButton.rocket {
+    background: transparent;
+    border: 1px solid #6c757d
+}
+
+.reactionButton.coffee {
+    background: transparent;
+    border: 1px solid #ffc107
 }

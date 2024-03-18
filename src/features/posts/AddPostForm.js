@@ -48,7 +48,7 @@ export const AddPostForm = () => {
         <div className="container-fluid">
             <div className="row g-3">
                 <div className="col col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <section className='form-wrapper'>
+                    <section className='article form-wrapper h-100 p-3 shadow-sm bg-white rounded'>
                         <h2 className="Form-title mb-3">Add a New Post</h2>
                         <form>
                             <div className="form-group">
@@ -58,8 +58,7 @@ export const AddPostForm = () => {
 
                             <div className="form-group">
                                 <label htmlFor="postAuthor">Author</label>
-                                <select className="form-select" id="postAuthor" value={userId} onChange={onAuthorChanged}>
-                                    <option selected value="">Select Author</option>
+                                <select className="form-select" id="postAuthor" value={userId} onChange={onAuthorChanged} defaultValue={usersOptions[0]}>
                                     {usersOptions}
                                 </select>
                             </div>
